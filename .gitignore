@@ -1,7 +1,10 @@
+# Ignore everything
 *
 
-# But not this folder
-!build/
-
-# And not .gitignore file itself
+# But not these files...
 !.gitignore
+!build/**/*
+
+# Ignore specific other folders completely
+.dart_tool/
+web/
