@@ -52,19 +52,18 @@ nav a:hover {
 }
 
 /* Responsive design for smaller screens */
+/* Responsive design for smaller screens */
 @media (max-width: 600px) {
   nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  #nav_links {
-    flex-direction: column;
+    font-size: 12px;
+    /* Reduced font size for navigation links */
+    margin: 5 12px;
+    /* Reduced margin between links */
   }
 
   #lang_toggle {
-    margin-left: 0;
-    /* Remove left margin on smaller screens */
+    display: none;
+    /* Hide the language toggle button on small screens */
   }
 }
 

@@ -52,7 +52,6 @@ void setDynamicTitleAndNavigation() {
   updateLanguageUI(isKorean);
 }
 
-
 void updateLanguageUI(bool isKorean) {
   DivElement navEn = querySelector('#nav_en') as DivElement;
   DivElement navKo = querySelector('#nav_ko') as DivElement;

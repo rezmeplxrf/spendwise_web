@@ -20,21 +20,21 @@
       window.dispatchEvent(new PopStateEvent('popstate'));
     }
   </script>
-<nav>
-  <div id="nav_links">
-    <div id="nav_en">
-      <a href="/about_en" onclick="navigateTo(event, '/about_en')">About</a>
-      <a href="/terms_en" onclick="navigateTo(event, '/terms_en')">Terms of Service</a>
-      <a href="/privacy_en" onclick="navigateTo(event, '/privacy_en')">Privacy Policy</a>
+  <nav>
+    <div id="nav_links">
+      <div id="nav_en">
+        <a href="/about_en" onclick="navigateTo(event, '/about_en')">About</a>
+        <a href="/terms_en" onclick="navigateTo(event, '/terms_en')">Terms of Service</a>
+        <a href="/privacy_en" onclick="navigateTo(event, '/privacy_en')">Privacy Policy</a>
+      </div>
+      <div id="nav_ko">
+        <a href="/about_ko" onclick="navigateTo(event, '/about_ko')">소개</a>
+        <a href="/terms_ko" onclick="navigateTo(event, '/terms_ko')">이용약관</a>
+        <a href="/privacy_ko" onclick="navigateTo(event, '/privacy_ko')">개인정보처리방침</a>
+      </div>
+      <button id="lang_toggle" onclick="toggleLanguage()">EN/KO</button>
     </div>
-    <div id="nav_ko">
-      <a href="/about_ko" onclick="navigateTo(event, '/about_ko')">소개</a>
-      <a href="/terms_ko" onclick="navigateTo(event, '/terms_ko')">이용약관</a>
-      <a href="/privacy_ko" onclick="navigateTo(event, '/privacy_ko')">개인정보처리방침</a>
-    </div>
-    <button id="lang_toggle" onclick="toggleLanguage()">EN/KO</button>
-  </div>
-</nav>
+  </nav>
   <div id="output"></div>
 </body>
 
