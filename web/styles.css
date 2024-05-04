@@ -11,11 +11,19 @@ body {
 
 nav {
   background-color: #2c3e50;
-  /* Dark shade of blue */
   text-align: center;
-  /* Centers the links */
   padding: 10px 0;
-  /* Padding around the nav bar */
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: center;
+  /* Center the nav links */
+  align-items: center;
+  /* Align items vertically */
+}
+
+#nav_links {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -47,8 +55,32 @@ nav a:hover {
 @media (max-width: 600px) {
   nav a {
     display: block;
-    /* Stack links vertically */
     margin: 10px 0;
-    /* Adjust margin for stacked links */
   }
+
+  #nav_links {
+    flex-direction: column;
+  }
+
+  #lang_toggle {
+    margin-left: 0;
+    /* Remove left margin on smaller screens */
+  }
+}
+
+#lang_toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  /* Optional: Adjust padding for better appearance */
+}
+
+#lang_toggle:hover {
+  color: #f39c12;
+  /* Orange color on hover */
+  text-decoration: underline;
+  /* Underline on hover */
 }
