@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!build/
+!build/**/*
+
+# Explicitly ignore other directories and files
+.dart_tool/
+web/
