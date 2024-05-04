@@ -1,10 +1,10 @@
-<h1>SpendWise TERMS OF SERVICE</h1>
+<h1>TERMS OF SERVICE</h1>
 Last updated May 04, 2024
 <br>
 <br>
 <br>
-AGREEMENT TO OUR LEGAL TERMS
 
+AGREEMENT TO OUR LEGAL TERMS
 We are RFway LLC ("Company," "we," "us," "our"), a company registered in South Korea at 213, Eondong-ro, Giheung-gu, Yongin-si, Gyeonggi-do 16988.
 
 We operate the mobile application SpendWise (the "App"), as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").

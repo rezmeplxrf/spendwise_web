@@ -2,6 +2,7 @@ import 'package:web/helpers.dart';
 import 'package:markdown/markdown.dart';
 import 'dart:html';
 
+import 'custom_pages.dart';
 import 'router.dart';
 
 void main() async {
@@ -32,14 +33,15 @@ void registerAllRoutes(Router router, DivElement outputElement) {
       '/',
       () => outputElement.text =
           'SpendWise is available on AppStore and Google PlayStore.');
-  router.register('/about_en', () => outputElement.text = 'About SpendWise');
+  router.register('/about_en', () => loadAboutPage(outputElement));
   router.register(
       '/terms_en', () => loadMarkdown('terms/en.md', outputElement));
   router.register(
       '/privacy_en', () => loadMarkdown('privacy/en.md', outputElement));
 
   // Korean routes
-  router.register('/about_ko', () => outputElement.text = 'SpendWise 소개');
+  router.register(
+      '/about_ko', () => loadMarkdown('about/ko.md', outputElement));
   router.register(
       '/terms_ko', () => loadMarkdown('terms/ko.md', outputElement));
   router.register(

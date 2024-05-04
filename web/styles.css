@@ -52,7 +52,6 @@ nav a:hover {
 }
 
 /* Responsive design for smaller screens */
-/* Responsive design for smaller screens */
 @media (max-width: 600px) {
   nav a {
     font-size: 12px;
