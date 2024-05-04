@@ -1,5 +1,0 @@
-
-# Explicitly ignore other directories and files
-.dart_tool/
-build/
-./firebase
