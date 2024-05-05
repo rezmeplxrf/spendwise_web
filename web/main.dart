@@ -3,11 +3,10 @@ import 'package:markdown/markdown.dart';
 import 'dart:html';
 
 import 'about.dart';
-import 'router.dart';
 
 void main() async {
   final Router router = Router();
-  final outputElement = querySelector('#output') as DivElement;
+  final outputElement = querySelector('#content') as DivElement;
 
   // Set the dynamic title and adjust navigation
   setDynamicTitleAndNavigation();
@@ -29,10 +28,7 @@ void main() async {
 
 void registerAllRoutes(Router router, DivElement outputElement) {
   // English routes
-  router.register(
-      '/',
-      () => outputElement.text =
-          'SpendWise is available on AppStore and Google PlayStore.');
+  router.register('/', () => redirectToLocaleAboutPage(router, outputElement));
   router.register('/about_en', () => loadAboutPage(outputElement));
   router.register(
       '/terms_en', () => loadMarkdown('terms/en.md', outputElement));
@@ -45,6 +41,16 @@ void registerAllRoutes(Router router, DivElement outputElement) {
       '/terms_ko', () => loadMarkdown('terms/ko.md', outputElement));
   router.register(
       '/privacy_ko', () => loadMarkdown('privacy/ko.md', outputElement));
+}
+
+void redirectToLocaleAboutPage(Router router, DivElement outputElement) {
+  String language = window.navigator.language;
+  bool isKorean = language.startsWith('ko');
+  if (isKorean) {
+    router.route('/about_ko');
+  } else {
+    router.route('/about_en');
+  }
 }
 
 void setDynamicTitleAndNavigation() {
@@ -84,5 +90,18 @@ void loadMarkdown(String path, DivElement outputElement) async {
         markdownToHtml(markdown, inlineSyntaxes: [InlineHtmlSyntax()]);
   } catch (e) {
     outputElement.text = 'Failed to load markdown content: $e';
+  }
+}
+
+
+class Router {
+  final Map<String, Function> _routes = {};
+
+  void register(String routePath, Function callback) {
+    _routes[routePath] = callback;
+  }
+
+  void route(String path) {
+    _routes[path]?.call();
   }
 }
