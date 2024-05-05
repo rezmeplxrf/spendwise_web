@@ -1,1 +1,0 @@
-![alt text](http://127.0.0.1:52666/about/test.jpg)

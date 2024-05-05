@@ -1,0 +1,64 @@
+#about-app h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+#about-app p {
+    text-align: center;
+    font-size: 18px;
+    color: #34495e;
+}
+
+.scrolling-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.scrolling-wrapper img {
+    display: inline-block;
+    width: calc(100% - 20px);
+    /* 100% minus padding for mobile */
+    max-width: 100%;
+    /* To prevent overflow */
+    margin: 0 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#additional-images img,
+#additional-images2 img {
+    width: calc(100% - 20px);
+    /* 100% minus margins for mobile */
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    /* To take full line */
+    box-sizing: border-box;
+    /* Include padding and borders in width */
+}
+
+#about-app a img {
+    width: 150px;
+    margin: 20px;
+}
+
+/* Desktop Specific Styles */
+@media (min-width: 768px) {
+    .scrolling-wrapper img {
+        width: calc(80%);
+        /* Increased padding for desktop */
+        margin: 0 100px;
+        /* Increased margin for desktop */
+    }
+
+    #additional-images img,
+    #additional-images2 img {
+        width: calc(80%);
+        /* 100% minus margins for desktop */
+        margin: 100px;
+        /* Increased margin for desktop */
+    }
+}

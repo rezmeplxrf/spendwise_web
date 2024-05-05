@@ -2,7 +2,7 @@ import 'package:web/helpers.dart';
 import 'package:markdown/markdown.dart';
 import 'dart:html';
 
-import 'custom_pages.dart';
+import 'about.dart';
 import 'router.dart';
 
 void main() async {
@@ -40,8 +40,7 @@ void registerAllRoutes(Router router, DivElement outputElement) {
       '/privacy_en', () => loadMarkdown('privacy/en.md', outputElement));
 
   // Korean routes
-  router.register(
-      '/about_ko', () => loadMarkdown('about/ko.md', outputElement));
+  router.register('/about_ko', () => loadAboutPage(outputElement));
   router.register(
       '/terms_ko', () => loadMarkdown('terms/ko.md', outputElement));
   router.register(
