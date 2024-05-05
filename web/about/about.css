@@ -1,26 +1,55 @@
 html,
 body {
+
 	background-image: url('about/background.svg');
 }
-header {
-	color: #fff;
+
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+	animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+header,
+footer {
+
 	padding: 40px 20px;
 	text-align: center;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-	background-size: cover;
-	background-position: center;
+
+	border-radius: 8px;
+	margin-bottom: 20px;
 }
-header img {
+
+header img,
+footer img {
 	width: 150px;
 	height: auto;
 	transition: transform 0.3s ease;
 }
- 
-header img:hover {
+
+header img:hover,
+footer img:hover {
 	transform: scale(1.1);
 }
 
-header .store-links a {
+header .store-links a,
+footer .store-links a {
 	margin: 0 10px;
 }
 
@@ -29,30 +58,31 @@ header h1 {
 	font-size: 2.8em;
 }
 
-header p {
+header p,
+footer p {
 	margin-top: 10px;
 	font-size: 1.4em;
 }
 
-
-section#features {
+section {
 	text-align: center;
-	padding: 10px;
+	padding: 20px;
+	background-color: transparent;
 }
 
-section#features h2 {
+section h2 {
 	color: #333;
 	font-size: 2em;
 	margin-bottom: 20px;
 }
 
-section#features ul {
+section ul {
 	list-style: none;
 	padding: 0;
 }
 
-section#features li {
-	background: #e8ecef;
+section li {
+	background: #fff;
 	margin: 10px;
 	padding: 15px;
 	border-radius: 8px;
@@ -60,60 +90,24 @@ section#features li {
 	display: flex;
 	align-items: center;
 	gap: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section#features img {
+section li:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+section img {
 	width: 100px;
 	height: auto;
 	border-radius: 4px;
 }
 
-footer {
-	color: #fff;
-	padding: 40px 20px;
-	text-align: center;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-	background-size: cover;
-	background-position: center;
-}
-
-footer p {
-	margin: 20px 0;
-	font-size: 1.2em;
-}
-
-footer .store-links a {
-	margin: 0 10px;
-}
-
-footer img {
-	width: 150px;
-	height: auto;
-	transition: transform 0.3s ease;
-}
-
-footer img:hover {
-	transform: scale(1.1);
-}
-
 section#contact {
-	text-align: center;
-	padding: 20px;
-	background-color: #fff;
-	margin: 20px auto;
-	width: 80%;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-section#contact h2 {
-	color: #333;
-	font-size: 2em;
-}
-
-section#contact label {
-	display: block;
-	margin-bottom: 5px;
-	font-size: 1.2em;
+	background-color: transparent;
+	box-shadow: none;
 }
 
 section#contact button {
@@ -124,6 +118,7 @@ section#contact button {
 	border-radius: 4px;
 	cursor: pointer;
 	font-size: 1.2em;
+	transition: background-color 0.3s ease;
 }
 
 section#contact button:hover {

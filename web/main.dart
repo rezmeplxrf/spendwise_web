@@ -4,24 +4,19 @@ import 'dart:html';
 
 import 'about.dart';
 
-void main() async {
+void main() {
   final Router router = Router();
   final outputElement = querySelector('#content') as DivElement;
-
-  // Set the dynamic title and adjust navigation
+  final bodyElement = querySelector('body') as BodyElement;
   setDynamicTitleAndNavigation();
-
-  // Register routes for both English and Korean
   registerAllRoutes(router, outputElement);
-
+  bodyElement.style.visibility = 'visible';
   // Setup a listener for URL changes
   window.onPopState.listen((_) {
     router.route(window.location.pathname);
   });
-
   // Handle the initial route
   router.route(window.location.pathname);
-
   // Setup language toggle
   querySelector('#lang_toggle')?.onClick.listen((_) => toggleLanguage());
 }
@@ -92,7 +87,6 @@ void loadMarkdown(String path, DivElement outputElement) async {
     outputElement.text = 'Failed to load markdown content: $e';
   }
 }
-
 
 class Router {
   final Map<String, Function> _routes = {};

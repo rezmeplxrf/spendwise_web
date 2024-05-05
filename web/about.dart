@@ -1,23 +1,43 @@
 import 'dart:html';
+import 'translation.dart';
 
 void loadAboutPage(DivElement outputElement) async {
-    String language = window.navigator.language;
-  bool isKorean = language.startsWith('ko');
-  
-  try {
-    // Fetch the HTML content from about.html
-     String url = isKorean ? 'about/about_ko.html' : 'about/about_en.html';
-    String aboutHtmlContent = await HttpRequest.getString(url);
+  bool isKorean = window.location.pathname == '/about_ko';
 
-    outputElement.setInnerHtml(aboutHtmlContent,
+  try {
+    String url = 'about/about.html';
+    String aboutHtmlContent = await HttpRequest.getString(url);
+    DivElement tempContainer = DivElement();
+    tempContainer.setInnerHtml(aboutHtmlContent,
+        treeSanitizer: NodeTreeSanitizer.trusted);
+    if (isKorean) {
+      translate(tempContainer, true);
+    } else {
+      translate(tempContainer, false);
+    }
+    outputElement.setInnerHtml(tempContainer.innerHtml,
         treeSanitizer: NodeTreeSanitizer.trusted);
 
     addCustomStyles();
     setupFormListener();
   } catch (e) {
-    // Handle errors if the file can't be loaded
     outputElement.text = 'Failed to load page: $e';
   }
+}
+
+void translate(DivElement outputElement, bool isKorean) {
+  outputElement.querySelectorAll('[data-translate]').forEach((element) {
+    var key = element.getAttribute('data-translate');
+    if (isKorean) {
+      if (key != null && translationsKo.containsKey(key)) {
+        element.text = translationsKo[key]!;
+      }
+    } else {
+      if (key != null && translationEn.containsKey(key)) {
+        element.text = translationEn[key]!;
+      }
+    }
+  });
 }
 
 void addCustomStyles() async {
@@ -27,6 +47,7 @@ void addCustomStyles() async {
     String aboutCssContent = await HttpRequest.getString(url);
     style.setInnerHtml(aboutCssContent);
     document.head?.append(style);
+    querySelector('.container')?.style.visibility = 'visible';
   } catch (e) {
     print(e);
   }
