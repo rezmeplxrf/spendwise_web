@@ -10,7 +10,7 @@ body {
   justify-content: center;
 
   font-family: 'Roboto', sans-serif;
-  background: white;
+  background-image: url('about/background.svg');
   background-size: cover;
   background-repeat: repeat;
 }
@@ -25,6 +25,17 @@ nav {
   /* Center the nav links */
   align-items: center;
   /* Align items vertically */
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 #nav_links {

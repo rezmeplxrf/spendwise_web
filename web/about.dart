@@ -17,7 +17,7 @@ void loadAboutPage(DivElement outputElement) async {
     }
     outputElement.setInnerHtml(tempContainer.innerHtml,
         treeSanitizer: NodeTreeSanitizer.trusted);
-
+    outputElement.style.backgroundColor = null;
     addCustomStyles();
     setupFormListener();
   } catch (e) {

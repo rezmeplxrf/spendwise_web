@@ -81,6 +81,8 @@ void toggleLanguage() {
 void loadMarkdown(String path, DivElement outputElement) async {
   try {
     final markdown = await HttpRequest.getString(path);
+    // remove background
+    outputElement.style.backgroundColor = 'white';
     outputElement.innerHtml =
         markdownToHtml(markdown, inlineSyntaxes: [InlineHtmlSyntax()]);
   } catch (e) {
