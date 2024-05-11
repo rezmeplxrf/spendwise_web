@@ -8,7 +8,7 @@ This project is still under development, and both the code and UI are not great.
 
 Feel free to modify the code as per your needs or use it to understand how Dart for web functions. However, since the codebase includes my app's actual landing page, privacy policy, and terms of use, please do not use it as is.
 
-## To check out the actual web page which is still in development you can visit:
+## Check out the actual web page (still in development)
 https://pacific-nuance-389111.web.app/
 
 
@@ -31,7 +31,7 @@ dart pub global activate webdev
 ```
 
 
-## Introduction to Web Development Components
+## If you are new to Web Development
 
 - **HTML File**: Used for the layout of the webpage. You can also include styles and business logic directly within an HTML file or use it only for layout.
 - **CSS File**: Optional, used for styling and animations.
@@ -92,7 +92,7 @@ await dio.get('path/to/file');
 ```
 
 
-## Building the web page
+## Compiling
 ```bash
 webdev build
 ```
