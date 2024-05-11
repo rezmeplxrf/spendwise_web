@@ -12,6 +12,15 @@ Feel free to modify the code as per your needs or use it to understand how Dart 
 https://pacific-nuance-389111.web.app/
 
 
+## Starting a Project
+
+To create a new project, use:
+
+```bash
+dart create -t web [project_name]
+```
+
+
 ## Installation
 
 To install necessary packages, run the following commands:
@@ -21,13 +30,6 @@ dart pub add build_runner build_web_compilers --dev
 dart pub global activate webdev
 ```
 
-## Starting a Project
-
-To create a new project, use:
-
-```bash
-dart create -t web [project_name]
-```
 
 ## Introduction to Web Development Components
 
