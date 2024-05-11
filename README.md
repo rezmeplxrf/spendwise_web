@@ -64,7 +64,7 @@ querySelector('#lang_toggle')?.onClick.listen((_) => toggleLanguage());
 You can load data from assets or a network:
 
 ```dart
-// Using HttpRequest to fetch data
+// Using HttpRequest to fetch data (you can also load local file)
 await HttpRequest.getString('path/to/file');
 
 // Using Dio (just like in  Flutter)
