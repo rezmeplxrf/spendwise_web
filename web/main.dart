@@ -8,7 +8,7 @@ void main() {
   final Router router = Router();
   final outputElement = querySelector('#content') as DivElement;
   final bodyElement = querySelector('body') as BodyElement;
-
+   
   setDynamicTitleAndNavigation();
   registerAllRoutes(router, outputElement);
   bodyElement.style.visibility = 'visible';

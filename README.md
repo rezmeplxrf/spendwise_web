@@ -52,6 +52,10 @@ bodyElement.style.backgroundColor = 'blue';
 
 // Modifying text
 bodyElement.text = 'Some text';
+
+// or use setInnerHtml() 
+bodyElement.setInnerHtml() 
+
 ```
 
 ### Trigger Functions on User Actions

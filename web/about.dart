@@ -10,6 +10,8 @@ void loadAboutPage(DivElement outputElement) async {
     String url = 'about/about.html';
     String aboutHtmlContent = await HttpRequest.getString(url);
     DivElement tempContainer = DivElement();
+
+    // NodeTreeSanitizer.trusted shouldn't be used when user generated contents are included in that element
     tempContainer.setInnerHtml(aboutHtmlContent,
         treeSanitizer: NodeTreeSanitizer.trusted);
     if (isKorean) {
