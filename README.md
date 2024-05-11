@@ -1,10 +1,3 @@
-## Motivation
-I tried various javascript web frameworks but I felt those are not so modern compared to Flutter.
-So I wanted to try out Dart web.
-I know [jaspr](https://pub.dev/packages/jaspr) exists
-but to me it feels too much for a simple landing and privacy policy page.
-
-
 # Getting Started with Webdev for Statically Generated Webpages
 
 I hope this repo can help you get started with Webdev, which is useful for building statically generated webpages. This is distinct from Flutter web apps. For more comprehensive details, visit the [Dart webdev tool page](https://dart.dev/tools/webdev).
