@@ -21,7 +21,7 @@ final Map<String, String> translationEn = {
   'title': 'SpendWise',
   'subTitle': 'Manage your expenses and shop in one place.',
   'features': 'Features',
-  'tracking': 'Expnese Tracking',
+  'tracking': 'Expense Tracking',
   'trackingDetail':
       'View and search for purchase histories from multiple e-commerce platforms and export to CSV file securely.',
   'finder': 'Product Finder',

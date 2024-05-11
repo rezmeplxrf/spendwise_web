@@ -22,19 +22,12 @@ void main() {
   querySelector('#lang_toggle')?.onClick.listen((_) => toggleLanguage());
 }
 
-/* 
-Note: the reason why I am registering all routes is because this way,
-the terms and privacy pages of both languages can be accessed by url like "https://example.com/terms_en" directly 
-without having to visiting the root page "https://example.com/" first.
-*/
-
 void registerAllRoutes(Router router, DivElement outputElement) {
-  // English routes
-
-  // root url
   router.register(
       '/', () => redirectToLocalizedAboutPage(router, outputElement));
 
+
+  // English routes
   router.register('/about_en', () => loadAboutPage(outputElement));
   router.register(
       '/terms_en', () => loadMarkdown('terms/en.md', outputElement));
