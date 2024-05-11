@@ -1,12 +1,19 @@
+## Motivation
+I tried various javascript web frameworks but I felt those are not so modern compared to Flutter.
+So I wanted to try out Dart web.
+I know [jaspr](https://pub.dev/packages/jaspr) exists
+but to me it feels too much for a simple landing and privacy policy page.
+
+
 # Getting Started with Webdev for Statically Generated Webpages
 
-This guide will help you get started with Webdev, which is useful for building statically generated webpages. This is distinct from Flutter web apps. For more comprehensive details, visit the [Dart webdev tool page](https://dart.dev/tools/webdev).
+I hope this repo can help you get started with Webdev, which is useful for building statically generated webpages. This is distinct from Flutter web apps. For more comprehensive details, visit the [Dart webdev tool page](https://dart.dev/tools/webdev).
 
 ## Disclaimer
 
-This project is under development, and both the code and UI are not yet optimized. The primary purpose of making this project public is to demonstrate to Flutter developers that creating static web pages with Dart is relatively straightforward. Even without prior web development experience, you might grasp the basics within an hour.
+This project is still under development, and both the code and UI are not great. The primary purpose of making this project public is to demonstrate to Flutter developers that creating static web pages with Dart is relatively straightforward. Even without prior web development experience (just like I didn't), you might grasp the basics within an hour.
 
-Feel free to modify the code as per your needs or use it to understand how Dart for web functions. However, since the codebase includes my app's landing page, privacy policy, and terms of use, please do not use it as is.
+Feel free to modify the code as per your needs or use it to understand how Dart for web functions. However, since the codebase includes my app's actual landing page, privacy policy, and terms of use, please do not use it as is.
 
 ## To check out the actual web page which is still in development you can visit:
 https://pacific-nuance-389111.web.app/
