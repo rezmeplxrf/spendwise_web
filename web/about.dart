@@ -2,7 +2,9 @@ import 'dart:html';
 import 'translation.dart';
 
 void loadAboutPage(DivElement outputElement) async {
-  bool isKorean = window.location.pathname == '/about_ko';
+  String language = window.navigator.language;
+  bool isKorean =
+      (language.startsWith('ko') && window.location.pathname != '/about_en');
 
   try {
     String url = 'about/about.html';
@@ -15,6 +17,7 @@ void loadAboutPage(DivElement outputElement) async {
     } else {
       translate(tempContainer, false);
     }
+
     outputElement.setInnerHtml(tempContainer.innerHtml,
         treeSanitizer: NodeTreeSanitizer.trusted);
     outputElement.style.backgroundColor = null;

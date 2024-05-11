@@ -1,6 +1,5 @@
-
-
 .container {
+	display: block;
 	width: 90%;
 	max-width: 1200px;
 	margin: auto;
@@ -8,17 +7,78 @@
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-	animation: fadeIn 1.5s ease-out;
+
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
+.section#video iframe {
+	width: 50%;
+	height: auto;
+	position: relative;
+	display: block;
+}
+
+.video-wrapper {
+	position: relative;
+	padding-top: 56.25%;
+	/* 16:9 Aspect Ratio */
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.feature-item {
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+	gap: 20px;
+	margin-bottom: 3%;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 0 0px 10px lightskyblue;
+	background: transparent;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* for mobile screen */
+@media (max-width: 768px) {
+	.feature-item {
+		flex-direction: column;
+		align-items: center;
 	}
 
-	to {
-		opacity: 1;
+	/* .feature-text,
+	.feature-image {
+		width: 100%;
 	}
+
+	.feature-image {
+		order: 2;
+		margin-top: 10px;
+	} */
+}
+
+.feature-text {
+	flex: 1;
+	padding: 10px;
+	overflow-wrap: break-word;
+	white-space: normal;
+	justify-content: center;
+}
+
+
+.feature-text strong {
+	font-size: 1.4em;
+	align-self: center;
+}
+
+.feature-text p {
+	font-size: 1.2em;
 }
 
 header,
@@ -26,7 +86,6 @@ footer {
 
 	padding: 40px 20px;
 	text-align: center;
-
 	border-radius: 8px;
 	margin-bottom: 20px;
 }
@@ -61,14 +120,11 @@ footer p {
 
 section {
 	text-align: center;
-	padding: 20px;
-	background-color: transparent;
 }
 
 section h2 {
 	color: #333;
 	font-size: 2em;
-	margin-bottom: 20px;
 }
 
 section ul {
@@ -76,22 +132,13 @@ section ul {
 	padding: 0;
 }
 
-section li {
-	background: #fff;
-	margin: 10px;
-	padding: 15px;
-	border-radius: 8px;
-	font-size: 1.2em;
-	display: flex;
-	align-items: center;
-	gap: 20px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 section li:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+section#features {
+	margin-bottom: 10%;
 }
 
 section img {
@@ -103,6 +150,8 @@ section img {
 section#contact {
 	background-color: transparent;
 	box-shadow: none;
+	margin-top: 10%;
+	margin-bottom: 2%;
 }
 
 section#contact button {

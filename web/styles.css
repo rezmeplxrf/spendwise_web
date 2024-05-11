@@ -16,16 +16,12 @@ body {
 }
 
 nav {
-  background: radial-gradient(circle, #2b4b87 0%, #2641c6 100%);
+  background: linear-gradient(to right, #2b4b87 0%, #2641c6 100%);
   text-align: center;
   padding: 10px 0;
   display: flex;
-  /* Use flexbox for layout */
   justify-content: center;
-  /* Center the nav links */
   align-items: center;
-  /* Align items vertically */
-  animation: fadeIn 1.5s ease-out;
 }
 
 @keyframes fadeIn {
@@ -45,36 +41,28 @@ nav {
 
 nav a {
   color: white;
-  /* White text color */
   text-decoration: none;
-  /* No underline on the links */
   margin: 0 15px;
-  /* Spacing between links */
   font-size: 16px;
-  /* Size of the text */
   transition: color 0.3s;
-  /* Smooth transition for hover effect */
 }
 
 nav a:hover {
   color: #f39c12;
-  /* Orange color on hover */
   text-decoration: underline;
-  /* Underline on hover */
 }
 
 #content {
   padding: 20px;
   text-align: start;
+  animation: fadeIn 1.5s ease-out;
 }
 
-/* Responsive design for smaller screens */
+/* for mobile screens */
 @media (max-width: 600px) {
   nav a {
     font-size: 12px;
-    /* Reduced font size for navigation links */
     margin: 5 12px;
-    /* Reduced margin between links */
   }
 
   #lang_toggle {
@@ -90,12 +78,20 @@ nav a:hover {
   font-size: 16px;
   cursor: pointer;
   padding: 10px 20px;
-  /* Optional: Adjust padding for better appearance */
 }
 
 #lang_toggle:hover {
   color: #f39c12;
-  /* Orange color on hover */
   text-decoration: underline;
-  /* Underline on hover */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  font-size: 12px;
+}
+
+footer p {
+  margin: 0;
 }

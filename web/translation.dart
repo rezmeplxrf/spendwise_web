@@ -9,11 +9,11 @@ final Map<String, String> translationsKo = {
   'finderDetail': '여러 플랫폼의 제품을 쉽게 검색하세요',
   'alerts': '핫딜 알림',
   'alertsDetail': '핫딜을 쉽게 확인하거나 검색하고 미리 알림을 받으세요',
-  'contact': '앱 또는 비즈니스 관련 문의',
-  'contactButton': '연락하기',
+  'contact': '문의나 요청이 있으시다면',
+  'contactButton': '문의주세요',
   'footer': '현명한소비 다운로드하기',
+  'videoTitle': '',
 };
-
 
 final Map<String, String> translationEn = {
   'title': 'SpendWise',
@@ -25,8 +25,10 @@ final Map<String, String> translationEn = {
   'finder': 'Product Finder',
   'finderDetail': 'Search for products from multiple platforms',
   'alerts': 'Deal Alerts',
-  'alertsDetail': 'View and search for deals from multiple platforms and get notifications from your device.',
-  'contact': 'Feel Free to Contact Us',
+  'alertsDetail':
+      'View and search for deals from multiple platforms and get notifications from your device.',
+  'contact': 'Any question or request?',
   'contactButton': 'Contact Us',
   'footer': 'Ready to take control? Download SpendWise now!',
+  'videoTitle': '',
 };

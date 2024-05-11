@@ -8,6 +8,7 @@ void main() {
   final Router router = Router();
   final outputElement = querySelector('#content') as DivElement;
   final bodyElement = querySelector('body') as BodyElement;
+ 
   setDynamicTitleAndNavigation();
   registerAllRoutes(router, outputElement);
   bodyElement.style.visibility = 'visible';
@@ -60,12 +61,12 @@ void updateLanguageUI(bool isKorean) {
   ButtonElement toggleButton = querySelector('#lang_toggle') as ButtonElement;
 
   if (isKorean) {
-    document.title = '현명한소비'; // Korean title
+    document.title = '현명한소비'; 
     navEn.style.display = 'none';
     navKo.style.display = 'block';
     toggleButton.text = 'English';
   } else {
-    document.title = 'SpendWise'; // English title
+    document.title = 'SpendWise'; 
     navEn.style.display = 'block';
     navKo.style.display = 'none';
     toggleButton.text = 'Korean';
@@ -89,6 +90,8 @@ void loadMarkdown(String path, DivElement outputElement) async {
     outputElement.text = 'Failed to load markdown content: $e';
   }
 }
+
+
 
 class Router {
   final Map<String, Function> _routes = {};
