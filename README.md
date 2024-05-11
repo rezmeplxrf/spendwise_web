@@ -84,6 +84,12 @@ await dio.get('path/to/file');
 <audio src="path/to/file">  <!-- For audio -->
 ```
 
+
+## Building the web page
+```bash
+webdev build
+```
+
 ## Deploying to Firebase Hosting
 
 To deploy your project to Firebase Hosting, follow these steps:
