@@ -67,8 +67,9 @@ You can load data from assets or a network:
 // Using HttpRequest to fetch data
 await HttpRequest.getString('path/to/file');
 
-// Using Dio (similar to Flutter)
-await Dio().get('path/to/file');
+// Using Dio (just like in  Flutter)
+final dio = Dio();
+await dio.get('path/to/file');
 
 // Directly in HTML
 <script src="path/to/file"></script>  <!-- If it's a script -->
