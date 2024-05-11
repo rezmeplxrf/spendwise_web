@@ -1,3 +1,5 @@
+// Localization is optional and you can just write your text in html file directly as well
+
 final Map<String, String> translationsKo = {
   'title': '현명한소비',
   'subTitle': '온라인 쇼핑의 지출을 관리하고 지혜롭게 소비하세요.',

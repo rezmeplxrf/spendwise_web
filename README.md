@@ -8,6 +8,10 @@ because I just wanted to let flutter devs know that building a static webpages i
 For your information, I had no prior experience with web development.
 You can too probably grasp how it works within an hour.
 
+You can change the codes to your liking or just use it to get the idea of how dart web works 
+but since it's for my app's actual landing page as well as privacy policy and terms of use pages, 
+Please do not use as it is.
+
 ### Install
 dart pub add build_runner build_web_compilers --dev
 dart pub global activate webdev
@@ -15,10 +19,12 @@ dart pub global activate webdev
 ### To start a project
 dart create -t web [project_name]
 
+
 ### For those who are not familiar with Web development
 html file is for the layout of the webpage. However, you can put anything in html file including style and business logic.
 css file is for styling and animation. but it's optional.
 dart file is for business logic. but you can do anything with it or without it.
+
 
 ### How to manipulate html in dart
 It's similar to how web scraping works. 
@@ -59,6 +65,4 @@ firebase init
 firebae login
 firebase deploy --only hosting
 
-
-n 
 

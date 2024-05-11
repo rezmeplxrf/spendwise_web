@@ -24,7 +24,10 @@ void main() {
 
 void registerAllRoutes(Router router, DivElement outputElement) {
   // English routes
-  router.register('/', () => redirectToLocaleAboutPage(router, outputElement));
+
+  // root url
+  router.register('/', () => redirectToLocalizedAboutPage(router, outputElement));
+  
   router.register('/about_en', () => loadAboutPage(outputElement));
   router.register(
       '/terms_en', () => loadMarkdown('terms/en.md', outputElement));
@@ -39,7 +42,7 @@ void registerAllRoutes(Router router, DivElement outputElement) {
       '/privacy_ko', () => loadMarkdown('privacy/ko.md', outputElement));
 }
 
-void redirectToLocaleAboutPage(Router router, DivElement outputElement) {
+void redirectToLocalizedAboutPage(Router router, DivElement outputElement) {
   String language = window.navigator.language;
   bool isKorean = language.startsWith('ko');
   if (isKorean) {
@@ -87,7 +90,7 @@ void loadMarkdown(String path, DivElement outputElement) async {
     outputElement.innerHtml =
         markdownToHtml(markdown, inlineSyntaxes: [InlineHtmlSyntax()]);
   } catch (e) {
-    outputElement.text = 'Failed to load markdown content: $e';
+    outputElement.text = 'Failed to load the content: $e';
   }
 }
 
