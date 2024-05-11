@@ -8,7 +8,7 @@ void main() {
   final Router router = Router();
   final outputElement = querySelector('#content') as DivElement;
   final bodyElement = querySelector('body') as BodyElement;
- 
+
   setDynamicTitleAndNavigation();
   registerAllRoutes(router, outputElement);
   bodyElement.style.visibility = 'visible';
@@ -22,12 +22,19 @@ void main() {
   querySelector('#lang_toggle')?.onClick.listen((_) => toggleLanguage());
 }
 
+/* 
+Note: the reason why I am registering all routes is because 
+the terms and privacy pages of both languages can be accessed by url like "https://example.com/terms_en" directly 
+without having to visiting the root page "https://example.com/" 
+*/
+
 void registerAllRoutes(Router router, DivElement outputElement) {
   // English routes
 
   // root url
-  router.register('/', () => redirectToLocalizedAboutPage(router, outputElement));
-  
+  router.register(
+      '/', () => redirectToLocalizedAboutPage(router, outputElement));
+
   router.register('/about_en', () => loadAboutPage(outputElement));
   router.register(
       '/terms_en', () => loadMarkdown('terms/en.md', outputElement));
@@ -64,12 +71,12 @@ void updateLanguageUI(bool isKorean) {
   ButtonElement toggleButton = querySelector('#lang_toggle') as ButtonElement;
 
   if (isKorean) {
-    document.title = '현명한소비'; 
+    document.title = '현명한소비';
     navEn.style.display = 'none';
     navKo.style.display = 'block';
     toggleButton.text = 'English';
   } else {
-    document.title = 'SpendWise'; 
+    document.title = 'SpendWise';
     navEn.style.display = 'block';
     navKo.style.display = 'none';
     toggleButton.text = 'Korean';
@@ -93,8 +100,6 @@ void loadMarkdown(String path, DivElement outputElement) async {
     outputElement.text = 'Failed to load the content: $e';
   }
 }
-
-
 
 class Router {
   final Map<String, Function> _routes = {};
