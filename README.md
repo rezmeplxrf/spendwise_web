@@ -88,5 +88,3 @@ firebase init
 firebase login
 firebase deploy --only hosting
 ```
-
-This README provides a basic overview and setup guide for working with Dart and Webdev for building static web pages.
