@@ -31,7 +31,7 @@ dart create -t web [project_name]
 
 ## Introduction to Web Development Components
 
-- **HTML File**: Used for the layout of the webpage. You can include styles and business logic directly within an HTML file.
+- **HTML File**: Used for the layout of the webpage. You can also include styles and business logic directly within an HTML file or use it only for layout.
 - **CSS File**: Optional, used for styling and animations.
 - **Dart File**: Primarily for business logic, but flexible for various uses.
 
