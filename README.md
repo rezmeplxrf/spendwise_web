@@ -8,6 +8,10 @@ This project is under development, and both the code and UI are not yet optimize
 
 Feel free to modify the code as per your needs or use it to understand how Dart for web functions. However, since the codebase includes my app's landing page, privacy policy, and terms of use, please do not use it as is.
 
+## To check out the actual web page which is still in development you can visit:
+https://pacific-nuance-389111.web.app/
+
+
 ## Installation
 
 To install necessary packages, run the following commands:
