@@ -37,7 +37,8 @@ dart create -t web [project_name]
 
 ## Manipulating HTML with Dart
 
-Manipulating HTML in Dart is somewhat akin to web scraping. Here’s how you can interact with HTML elements:
+Manipulating HTML in Dart is actually the same as Javascript.
+Here’s how you can interact with HTML elements:
 
 ### Example: Select and Manipulate an Element
 
