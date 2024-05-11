@@ -23,9 +23,9 @@ void main() {
 }
 
 /* 
-Note: the reason why I am registering all routes is because 
+Note: the reason why I am registering all routes is because this way,
 the terms and privacy pages of both languages can be accessed by url like "https://example.com/terms_en" directly 
-without having to visiting the root page "https://example.com/" 
+without having to visiting the root page "https://example.com/" first.
 */
 
 void registerAllRoutes(Router router, DivElement outputElement) {
