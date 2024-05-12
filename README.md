@@ -115,6 +115,81 @@ void main() async {
 ```
 
 
+## Routing example
+
+```html
+<script>
+    function navigateTo(event, path) {
+      event.preventDefault();
+      window.history.pushState({}, '', path);
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    }
+  </script>
+  <nav id="nav" style="visibility: hidden;">
+    <div id="nav_links">
+      <div id="nav_en">
+        <a href="/about_en" onclick="navigateTo(event, '/about_en')">About</a>
+        <a href="/terms_en" onclick="navigateTo(event, '/terms_en')">Terms of Service</a>
+        <a href="/privacy_en" onclick="navigateTo(event, '/privacy_en')">Privacy Policy</a>
+      </div>
+      <div id="nav_ko">
+        <a href="/about_ko" onclick="navigateTo(event, '/about_ko')">소개</a>
+        <a href="/terms_ko" onclick="navigateTo(event, '/terms_ko')">이용약관</a>
+        <a href="/privacy_ko" onclick="navigateTo(event, '/privacy_ko')">개인정보처리방침</a>
+      </div>
+      <button id="lang_toggle" onclick="toggleLanguage()">EN/KO</button>
+    </div>
+  </nav>
+```
+
+```dart
+class Router {
+  final Map<String, Function> _routes = {};
+
+  void register(String routePath, Function callback) {
+    _routes[routePath] = callback;
+  }
+
+  void route(String path) {
+    _routes[path]?.call();
+  }
+}
+
+void main() {
+      final Router router = Router();
+  final outputElement = querySelector('#content') as DivElement;
+  registerAllRoutes(router, outputElement);
+   window.onPopState.listen((_) {
+    router.route(window.location.pathname);
+  });
+  // Handle the initial route
+  router.route(window.location.pathname);
+  // Setup language toggle
+  querySelector('#lang_toggle')?.onClick.listen((_) => toggleLanguage());
+}
+
+void registerAllRoutes(Router router, DivElement outputElement) {
+  router.register(
+      '/', () => redirectToLocalizedAboutPage(router, outputElement));
+
+  // English routes
+  router.register('/about_en', () => loadAboutPage(outputElement));
+  router.register(
+      '/terms_en', () => loadMarkdown('terms/en.md', outputElement));
+  router.register(
+      '/privacy_en', () => loadMarkdown('privacy/en.md', outputElement));
+
+  // Korean routes
+  router.register('/about_ko', () => loadAboutPage(outputElement));
+  router.register(
+      '/terms_ko', () => loadMarkdown('terms/ko.md', outputElement));
+  router.register(
+      '/privacy_ko', () => loadMarkdown('privacy/ko.md', outputElement));
+}
+
+```
+
+
 ## Compiling
 ```bash
 webdev build
