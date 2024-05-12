@@ -117,7 +117,7 @@ void main() async {
 
 ## Routing example
 
-# index.html
+- index.html
 ```html
 <script>
     function navigateTo(event, path) {
@@ -143,7 +143,7 @@ void main() async {
   </nav>
 ```
 
-# main.dart
+- main.dart
 ```dart
 class Router {
   final Map<String, Function> _routes = {};
