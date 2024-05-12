@@ -55,7 +55,7 @@ bodyElement.style.backgroundColor = 'blue';
 // Modifying text
 bodyElement.text = 'Some text';
 
-// or use setInnerHtml() 
+// or use setInnerHtml() - note: NodeTreeSanitizer.trusted shouldn't be used for user generated contents
 bodyElement.setInnerHtml('<p>This is a paragraph added via Dart.</p>', treeSanitizer: NodeTreeSanitizer.trusted);
 
 ```
