@@ -47,6 +47,8 @@ nav a {
   transition: color 0.3s;
 }
 
+
+
 nav a:hover {
   color: #f39c12;
   text-decoration: underline;

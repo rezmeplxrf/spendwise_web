@@ -25,12 +25,10 @@ void loadAboutPage(DivElement outputElement) async {
     outputElement.style.backgroundColor = null;
     addCustomStyles();
     setupFormListener();
-
   } catch (e) {
     outputElement.text = 'Failed to load page: $e';
   }
 }
-
 
 void translate(DivElement outputElement, bool isKorean) {
   outputElement.querySelectorAll('[data-translate]').forEach((element) {
