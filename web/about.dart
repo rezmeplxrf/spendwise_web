@@ -8,8 +8,8 @@ void loadAboutPage(DivElement outputElement) async {
       (language.startsWith('ko') && window.location.pathname != '/about_en');
 
   try {
-    String url = 'about/about.html';
-    String aboutHtmlContent = await HttpRequest.getString(url);
+    String path = 'about/about.html';
+    String aboutHtmlContent = await HttpRequest.getString(path);
     DivElement tempContainer = DivElement();
 
     // NodeTreeSanitizer.trusted shouldn't be used if user generated contents are included in that element
