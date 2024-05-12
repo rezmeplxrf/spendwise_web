@@ -39,6 +39,7 @@ dart pub global activate webdev
 Note: you can do however you want. You can choose to do everything in html or dart. 
 Also, you can easily intergrate existing css libraries just like how you use packages from pub.dev
 For example, you can easily use [Bulma CSS](https://bulma.io/) by adding:
+```html
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
@@ -47,6 +48,7 @@ and use its prebuilt components by using 'class=' in any html element.
 <div class="block">
   This text is within a <strong>block</strong>.
 </div>
+```
 
 
 ## Manipulating HTML with Dart
