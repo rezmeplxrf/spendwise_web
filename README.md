@@ -38,8 +38,9 @@ dart pub global activate webdev
 - **Dart File**: Primarily for business logic. You can dynamically load text, images, and more.
 Note: you can do however you want. You can choose to do everything in html or dart. 
 Also, you can easily intergrate existing css libraries just like how you use packages from pub.dev
-<br>
-For example, you can easily use [Bulma CSS](https://bulma.io/) by adding:
+
+<br>For example, you can easily use [Bulma CSS](https://bulma.io/) by adding:
+
 ```html
 <link
   rel="stylesheet"
