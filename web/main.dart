@@ -26,7 +26,7 @@ void main() {
 
 void registerAllRoutes(Router router, DivElement outputElement) {
   router.register(
-      '/', () => redirectToLocalizedAboutPage(router, outputElement));
+      '/', () => redirectToLocalizedAboutPage(router));
 
   // English routes
   router.register('/about_en', () => loadAboutPage(outputElement));
@@ -43,7 +43,7 @@ void registerAllRoutes(Router router, DivElement outputElement) {
       '/privacy_ko', () => loadMarkdown('privacy/ko.md', outputElement));
 }
 
-void redirectToLocalizedAboutPage(Router router, DivElement outputElement) {
+void redirectToLocalizedAboutPage(Router router) {
   String language = window.navigator.language;
   bool isKorean = language.startsWith('ko');
   if (isKorean) {

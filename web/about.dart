@@ -1,5 +1,6 @@
 import 'dart:html';
 import 'translation.dart';
+import 'dart:js_util' as js_util;
 
 void loadAboutPage(DivElement outputElement) async {
   String language = window.navigator.language;
@@ -25,8 +26,42 @@ void loadAboutPage(DivElement outputElement) async {
     outputElement.style.backgroundColor = null;
     addCustomStyles();
     setupFormListener();
+
+    bool shouldRun = true;
+    if (window.location.pathname != '/') {
+      shouldRun = false;
+    }
+
+    initAOS(shouldRun);
   } catch (e) {
     outputElement.text = 'Failed to load page: $e';
+  }
+}
+
+void initAOS(bool shouldRun) {
+  // This demonstrates how to use JS function from Dart
+  // Initialize AOS in Dart
+  // because AOS has some strange behavior when navigating back to the page where it's supposed to run
+  // so this function will make AOS run only when route is in '/' and won't run if in '/about_ko' or '/about_en'
+
+  var aos = js_util.getProperty(js_util.globalThis, 'AOS');
+  if (aos != null) {
+    var options = js_util.newObject();
+    js_util.setProperty(options, 'startEvent', 'DOMContentLoaded');
+    js_util.setProperty(options, 'initClassName', 'aos-init');
+    js_util.setProperty(options, 'animatedClassName', 'aos-animate');
+    js_util.setProperty(options, 'useClassNames', false);
+    js_util.setProperty(options, 'offset', -20);
+    js_util.setProperty(options, 'delay', 0);
+    js_util.setProperty(options, 'duration', 1200);
+    js_util.setProperty(options, 'easing', 'ease');
+    js_util.setProperty(options, 'once', true);
+    js_util.setProperty(options, 'anchorPlacement', 'bottom-center');
+    js_util.setProperty(options, 'disable', !shouldRun);
+
+    js_util.callMethod(aos, 'init', [options]);
+  } else {
+    print('AOS is not defined');
   }
 }
 
@@ -48,8 +83,8 @@ void translate(DivElement outputElement, bool isKorean) {
 void addCustomStyles() async {
   StyleElement style = StyleElement();
   try {
-    String url = 'about/about.css';
-    String aboutCssContent = await HttpRequest.getString(url);
+    String path = 'about/about.css';
+    String aboutCssContent = await HttpRequest.getString(path);
     style.setInnerHtml(aboutCssContent);
     document.head?.append(style);
     querySelector('.container')?.style.visibility = 'visible';

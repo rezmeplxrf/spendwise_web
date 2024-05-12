@@ -11,6 +11,7 @@
 }
 
 
+
 .section#video iframe {
 	width: 100%;
 	height: auto;
@@ -37,8 +38,8 @@
 	display: flex;
 	align-items: start;
 	justify-content: space-between;
-	gap: 20px;
-	margin-bottom: 3%;
+	gap: 5%;
+	margin-bottom: 10%;
 	padding: 10px;
 	border-radius: 8px;
 	box-shadow: 0 0px 10px lightskyblue;
@@ -82,13 +83,19 @@
 	font-size: 1.2em;
 }
 
-header,
-section#cta {
+header {
 
 	padding: 40px 20px;
 	text-align: center;
 	border-radius: 8px;
-	margin-bottom: 20px;
+	margin-bottom: 10%;
+}
+
+section#cta {
+	padding: 40px 20px;
+	text-align: center;
+	border-radius: 8px;
+	margin-bottom: 2%;
 }
 
 header img,
