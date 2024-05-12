@@ -46,8 +46,10 @@ Also, you can easily intergrate existing css libraries just like how you use pac
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
 />
-```d
-and use its prebuilt components by using 'class=' in any html element.
+```
+
+<br>and use its prebuilt components by adding 'class=[predefined class name]' in any html element.
+
 ```html
 <div class="block">
   This text is within a <strong>block</strong>.
@@ -191,7 +193,8 @@ void registerAllRoutes(Router router, DivElement outputElement) {
 
 ```
 
-- If you don't want it to be a single page web, then you can create a folder in /web then create another index.html
+- If you don't want it to be a single page
+- e web, then you can create a folder in /web then create another index.html
 
 
 ## Compiling
