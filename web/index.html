@@ -13,7 +13,7 @@
   <script defer src="main.dart.js"></script>
 </head>
 
-<body style="visibility: hidden;">
+<body>
   <script>
     function navigateTo(event, path) {
       event.preventDefault();
@@ -21,7 +21,7 @@
       window.dispatchEvent(new PopStateEvent('popstate'));
     }
   </script>
-  <nav>
+  <nav id="nav" style="visibility: hidden;">
     <div id="nav_links">
       <div id="nav_en">
         <a href="/about_en" onclick="navigateTo(event, '/about_en')">About</a>
@@ -39,8 +39,6 @@
   <div id="content"></div>
 
 </body>
-<footer>
-  <p>© 2024 RFway LLC, All rights reserved.</p>
-</footer>
+
 
 </html>

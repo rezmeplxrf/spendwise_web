@@ -53,6 +53,9 @@ void addCustomStyles() async {
     style.setInnerHtml(aboutCssContent);
     document.head?.append(style);
     querySelector('.container')?.style.visibility = 'visible';
+
+    final footerElement = querySelector('#footerText') as HtmlElement;
+    footerElement.style.visibility = 'visible';
   } catch (e) {
     print(e);
   }

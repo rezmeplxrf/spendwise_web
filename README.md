@@ -72,7 +72,7 @@ querySelector('#lang_toggle')?.onClick.listen((_) => toggleLanguage());
 
 ### Loading External Resources
 
-You can load data from assets or a network:
+You can load data from local assets or a network:
 
 ```dart
 // Using HttpRequest

@@ -11,10 +11,11 @@ final Map<String, String> translationsKo = {
   'finderDetail': '여러 플랫폼의 제품을 쉽게 검색하세요',
   'alerts': '핫딜 알림',
   'alertsDetail': '핫딜을 쉽게 확인하거나 검색하고 미리 알림을 받으세요',
-  'contact': '문의나 요청이 있으시다면',
-  'contactButton': '문의주세요',
-  'footer': '현명한소비 다운로드하기',
-  'videoTitle': '',
+  'contact': '질문이나 요청이 있으시다면',
+  'contactButton': '문의하기',
+  'cta': '현명한소비 다운로드',
+  'videoTitle': '사용법 보기',
+  'brandlogos': '*각 상표는 해당 회사의 재산입니다',
 };
 
 final Map<String, String> translationEn = {
@@ -31,6 +32,7 @@ final Map<String, String> translationEn = {
       'View and search for deals from multiple platforms and get notifications from your device.',
   'contact': 'Any question or request?',
   'contactButton': 'Contact Us',
-  'footer': 'Ready to take control? Download SpendWise now!',
-  'videoTitle': '',
+  'cta': 'Ready to take control? Download SpendWise now!',
+  'videoTitle': 'Check out demo',
+  'brandlogos': '*Each logo is the property of their respective owners.',
 };

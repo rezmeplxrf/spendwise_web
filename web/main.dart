@@ -7,11 +7,13 @@ import 'about.dart';
 void main() {
   final Router router = Router();
   final outputElement = querySelector('#content') as DivElement;
-  final bodyElement = querySelector('body') as BodyElement;
-   
+  final navElement = querySelector('#nav') as HtmlElement;
   setDynamicTitleAndNavigation();
   registerAllRoutes(router, outputElement);
-  bodyElement.style.visibility = 'visible';
+
+  // to display navigation bar that is by default hidden because it looks ugly before fully loaded
+  navElement.style.visibility = 'visible';
+
   // Setup a listener for URL changes
   window.onPopState.listen((_) {
     router.route(window.location.pathname);
@@ -25,7 +27,6 @@ void main() {
 void registerAllRoutes(Router router, DivElement outputElement) {
   router.register(
       '/', () => redirectToLocalizedAboutPage(router, outputElement));
-
 
   // English routes
   router.register('/about_en', () => loadAboutPage(outputElement));
