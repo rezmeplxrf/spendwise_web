@@ -115,7 +115,7 @@ void main() async {
 ```
 
 
-## Routing example (Single page webpage)
+## Routing example of single page webpage
 
 - index.html
 ```html
@@ -190,6 +190,8 @@ void registerAllRoutes(Router router, DivElement outputElement) {
 }
 
 ```
+
+- If you don't want it to be a single page web, then you can create a folder in /web then create another index.html
 
 
 ## Compiling
