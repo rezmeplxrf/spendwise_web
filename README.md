@@ -36,6 +36,8 @@ dart pub global activate webdev
 - **HTML File**: Used for the layout of the webpage. You can also include styles and business logic directly within an HTML file or use it only for layout.
 - **CSS File**: Optional, used for styling and animations.
 - **Dart File**: Primarily for business logic. You can dynamically load text, images, and more.
+Note: you can do however you want. You can choose to do everything in html or dart. 
+Also, you can easily intergrate existing css libraries just like how you use packages from pub.dev
 
 ## Manipulating HTML with Dart
 
