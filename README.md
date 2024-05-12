@@ -43,8 +43,10 @@ For example, you can easily use [Bulma CSS](https://bulma.io/) by adding:
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
-/> in <head></head>
+/>
+```
 and use its prebuilt components by using 'class=' in any html element.
+```html
 <div class="block">
   This text is within a <strong>block</strong>.
 </div>
