@@ -115,7 +115,7 @@ void main() async {
 ```
 
 
-## Routing example
+## Routing example (Single page webpage)
 
 - index.html
 ```html
