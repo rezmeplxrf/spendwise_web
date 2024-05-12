@@ -56,7 +56,7 @@ bodyElement.style.backgroundColor = 'blue';
 bodyElement.text = 'Some text';
 
 // or use setInnerHtml() 
-bodyElement.setInnerHtml() 
+bodyElement.setInnerHtml('<p>This is a paragraph added via Dart.</p>', treeSanitizer: NodeTreeSanitizer.trusted);
 
 ```
 
@@ -75,20 +75,25 @@ querySelector('#lang_toggle')?.onClick.listen((_) => toggleLanguage());
 You can load data from local assets or a network:
 
 ```dart
-// Using HttpRequest
-await HttpRequest.getString('path/to/file');
+void main() async {
+  // Using HttpRequest to load data
+  String data = await HttpRequest.getString('path/to/data.json');
+  print(data);
 
-// Using Dio
-final dio = Dio();
-await dio.get('path/to/file');
+  // Using Dio for HTTP requests
+  final dio = Dio();
+  var response = await dio.get('https://api.example.com/data');
+  print(response.data);
+  // Note: These tags would be part of your HTML file
+}
 
 // Directly in HTML
-<script src="path/to/file"></script>  <!-- If it's a script -->
-<link rel="stylesheet" href="path/to/file">  <!-- If it's CSS -->
-<img src="path/to/file">  <!-- If it's an image -->
-<iframe src="path/to/file">  <!-- For embeddable content like YouTube videos -->
-<video src="path/to/file">  <!-- For direct video loading -->
-<audio src="path/to/file">  <!-- For audio -->
+<script src="path/to/file"></script> 
+<link rel="stylesheet" href="path/to/file">
+<img src="path/to/file"> 
+<iframe src="path/to/file"> 
+<video src="path/to/file"> 
+<audio src="path/to/file">
 ```
 
 
