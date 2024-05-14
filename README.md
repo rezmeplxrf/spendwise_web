@@ -100,11 +100,6 @@ void main() async {
   String data = await HttpRequest.getString('path/to/data.json');
   print(data);
 
-  // Using Dio for HTTP requests
-  final dio = Dio();
-  var response = await dio.get('https://api.example.com/data');
-  print(response.data);
-  // Note: These tags would be part of your HTML file
 }
 
 // Directly in HTML

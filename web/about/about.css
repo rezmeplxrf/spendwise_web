@@ -44,9 +44,10 @@
 	border-radius: 8px;
 	box-shadow: 0 0px 10px lightskyblue;
 	background: transparent;
-	
+
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .feature-text,
 
