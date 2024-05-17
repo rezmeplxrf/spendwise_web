@@ -63,6 +63,12 @@
 	margin-top: 5px;
 }
 
+.feature-image-2 {
+	width: 80%;
+	height: auto;
+	order: 2;
+	margin-top: 0px;
+}
 
 
 .feature-text {
@@ -149,12 +155,7 @@ section#features {
 	margin-bottom: 10%;
 }
 
-.image-caveat {
-	font-size: 0.7em;
-	color: #666;
-	text-align: center;
-	margin: 0;
-}
+
 
 section img {
 	width: 100px;
