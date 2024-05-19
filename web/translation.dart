@@ -10,7 +10,7 @@ final Map<String, String> translationsKo = {
   'finder': '제품 검색',
   'finderDetail': '살 것 목록을 작성하고 여러 플랫폼의 제품을 쉽게 검색하세요',
   'alerts': '핫딜 알림',
-  'alertsDetail': '핫딜을 쉽게 확인하거나 검색하고 미리 알림을 받으세요',
+  'alertsDetail': '여러 플랫폼의 핫딜을 쉽게 확인하거나 검색하고 미리 알림을 받으세요',
   'contact': '질문이나 요청이 있으시다면',
   'contactButton': '문의하기',
   'cta': '현명한소비 다운로드',

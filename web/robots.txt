@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Allow: /
+
+Sitemap: https://pacific-nuance-389111.web.app/sitemap.xml
